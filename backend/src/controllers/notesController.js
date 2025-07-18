@@ -1,6 +1,6 @@
 import Note from "../models/Note.js";
 
-export async function getNoteById(res, req) {
+export async function getNoteById(req, res) {
   try {
     const note = await Note.findById(req.params.id);
     if (!note) {
